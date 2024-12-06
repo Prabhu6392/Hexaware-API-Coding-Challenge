@@ -1,0 +1,27 @@
+.welcome-container {
+    text-align: center;
+    padding: 300px;
+    align-items: center;
+    background: linear-gradient(135deg, #e22b2b 0%, #960d46 100%);
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+  
+  button {
+    background-color: #f806f4;
+    margin: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #e00a0a, #d10445);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  

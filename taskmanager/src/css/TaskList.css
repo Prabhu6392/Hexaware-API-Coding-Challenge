@@ -1,0 +1,223 @@
+/* Main container */
+body {
+    background: linear-gradient(to right, #FFB6C1, #FF1493);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.task-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: none; /* Remove the specific container background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header with gradient background */
+.task-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.task-list-header h2 {
+    color: #333;
+    margin: 0;
+    font-size: 24px;
+}
+
+.add-task-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-task-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* Task list styling */
+.tasks-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Each task item */
+.task-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Task content (title) */
+.task-content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-title {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.task-title:hover {
+    color: #FF1493;
+}
+
+/* Actions (Edit/Delete buttons) */
+.task-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.edit-button, .delete-button {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Edit button styling */
+.edit-button {
+    background-color: #2196F3;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+/* Delete button styling */
+.delete-button {
+    background-color: #F44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #D32F2F;
+    transform: translateY(-2px);
+}
+
+/* No tasks found message */
+.no-tasks {
+    text-align: center;
+    color: #888;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+/* Loading and error state */
+.loading-spinner {
+    text-align: center;
+    font-size: 18px;
+    color: #FF1493;
+    margin-top: 50px;
+}
+
+.error-message {
+    text-align: center;
+    color: #F44336;
+    font-size: 18px;
+}
+
+.error-message button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.error-message button:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content h3 {
+    margin-top: 0;
+  }
+  
+  .modal-content label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .save-button,
+  .cancel-button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .save-button {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545;
+    color: #fff;
+  }

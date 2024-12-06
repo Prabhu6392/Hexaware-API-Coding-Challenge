@@ -1,0 +1,127 @@
+.task-page-specific {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.task-page-specific .task-form-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+}
+
+.task-page-specific .task-form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.task-page-specific .task-form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  position: relative;
+}
+
+.task-page-specific .task-form-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #f6d365, #fda085);
+}
+
+.task-page-specific .form-group {
+  margin-bottom: 20px;
+}
+
+.task-page-specific .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.task-page-specific input[type="text"],
+.task-page-specific textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.task-page-specific input[type="text"]:focus,
+.task-page-specific textarea:focus {
+  outline: none;
+  border-color: #fda085;
+  box-shadow: 0 0 5px rgba(253, 160, 133, 0.5);
+}
+
+.task-page-specific textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.task-page-specific .slider-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.task-page-specific .slider-container label {
+  display: flex;
+  align-items: center;
+}
+
+.task-page-specific .slider-container input[type="radio"] {
+  margin-right: 5px;
+}
+
+.task-page-specific .task-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #f6d365, #fda085);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.task-page-specific .task-button:hover {
+  background: linear-gradient(to right, #fda085, #f6d365);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.task-page-specific .task-button:active {
+  transform: translateY(1px);
+}
+
+.task-page-specific .error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .task-page-specific .task-form-container {
+    width: 90%;
+    padding: 25px;
+  }
+}
